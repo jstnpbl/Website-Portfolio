@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffeadb; /* Warm color background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Adjust width */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Dark text color */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 10px; /* Rounded corners for text boxes */
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff6b6b; /* Warm color button */
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff4f4f; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="home.html" method="post">
+            <h3>Username</h3>
+            <input type="text" name="username" placeholder="TYPE ANY" required>
+            <h3>Password</h3>
+            <input type="password" name="password" placeholder="TYPE ANY" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to redirect to home.html on form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = "home.html"; // Redirect to home.html
+        });
+    </script>
+</body>
+</html>
